@@ -11,56 +11,12 @@ data:
                 <pattern>%date{"MMM dd, yyyy h:mm:ss a"} %-5level %logger{35}: %msg %n</pattern>
             </encoder>
         </appender>
-        <logger name="org.forgerock.openicf.misc" level="INFO" additivity="false">
+    {{- range $class, $level := .Values.logLevels.classes }}
+        <logger name="{{ $class }}" level="{{ $level }}" additivity="false">
             <appender-ref ref="STDOUT"/>
         </logger>
-        <logger name="org.forgerock.openicf.connectors" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <!-- Legacy connectors -->
-        <logger name="org.identityconnectors" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <logger name="org.forgerock.openicf.framework" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <!-- To enable TraceProxy uncomment this - ->
-        <logger name="org.identityconnectors.framework.impl.api.LoggingProxy" level="DEBUG" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <logger name="org.identityconnectors.framework.api.operations" level="DEBUG" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger-->
-        <logger name="org.forgerock.openicf.common" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <logger name="org.forgerock.openicf.contract" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <logger name="org.forgerock.openicf.test" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <logger name="org.identityconnectors.common" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <!-- To enable RCS connections housekeeping task debugging, uncomment this - ->
-        <logger name="org.forgerock.openicf.framework.client" level="DEBUG" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger-->
-        <!-- To log IDM CAUD_TRANSACTION_ID for each operation, uncomment this - ->
-        <logger name="org.forgerock.openicf.framework.async.impl.AbstractLocalOperationProcessor" level="DEBUG" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger-->
-        <logger name="org.identityconnectors.framework" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <logger name="org.identityconnectors.contract" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <logger name="org.identityconnectors.test" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT"/>
-        </logger>
-        <root level="INFO">
+    {{- end }}
+        <root level="{{ .Values.logLevels.root }}">
             <appender-ref ref="STDOUT" />
         </root>
       </configuration>
