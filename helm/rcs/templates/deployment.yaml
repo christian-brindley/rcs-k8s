@@ -40,6 +40,8 @@ spec:
           volumeMounts:
             - name: config-vol
               mountPath: /opt/openicf/conf
+            - name: trusted-ca-vol
+              mountPath: /opt/openicf/trusted-cas
           env: 
             - name: RCS_CLIENT_ID
               valueFrom:
@@ -76,6 +78,12 @@ spec:
                 path: ConnectorServer.properties
               - key: LOG_CONFIG
                 path: logback.xml
+        - name: trusted-ca-vol
+          configMap:
+            name: rcs-config
+            items:
+              - key: DS_CA
+                path: ds-ca
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

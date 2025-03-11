@@ -24,3 +24,5 @@ data:
     connectorserver.scope=fr:idm:* 
     connectorserver.tokenEndpoint={{ .Values.idmEndpoints.token }}
     connectorserver.url={{ .Values.idmEndpoints.wss }}
+  DS_CA: |-
+    {{ .Values.trustedCerts.ds | nindent 4}}

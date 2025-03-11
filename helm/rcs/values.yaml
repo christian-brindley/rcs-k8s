@@ -47,3 +47,15 @@ logLevels:
     org.identityconnectors.framework: "INFO"
     org.identityconnectors.contract: "INFO"
     org.identityconnectors.test: "INFO"
+trustedCerts:
+  ds: |
+    -----BEGIN CERTIFICATE-----
+    MIIBfDCCASOgAwIBAgIKI/twA/VoZJ7rrjAKBggqhkjOPQQDAjAxMRYwFAYDVQQK
+    Ew1Gb3JnZVJvY2suY29tMRcwFQYDVQQDEw5EZXBsb3ltZW50IGtleTAeFw0yNTAy
+    MDcxMTIxNDRaFw0zNTAyMDUxMTIxNDRaMDExFjAUBgNVBAoTDUZvcmdlUm9jay5j
+    b20xFzAVBgNVBAMTDkRlcGxveW1lbnQga2V5MFkwEwYHKoZIzj0CAQYIKoZIzj0D
+    AQcDQgAEUxlevuUKQKq8I30/QMxIRnizsTsL2xt9VoQScIUtt92cuHxfWieqZHWx
+    qcz6921qPwlHYFhApoS4nuG0IawtYKMjMCEwDgYDVR0PAQH/BAQDAgEGMA8GA1Ud
+    EwEB/wQFMAMBAf8wCgYIKoZIzj0EAwIDRwAwRAIgcQ+yxa7kfTIRPxOOUf/a6j8F
+    fQ+jYP+xrrqtQisxdb4CIBQIfyhFLuBSLZBxjGgRgPyBhA00xWhhm52qei5LIdOQ
+    -----END CERTIFICATE-----
