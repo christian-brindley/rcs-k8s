@@ -22,6 +22,7 @@ data:
       </configuration>
   PROPERTIES_FILE: |
     connectorserver.scope=fr:idm:* 
+    connectorserver.loggingConfigFile=/opt/openicf/conf/logback.xml
     connectorserver.tokenEndpoint={{ .Values.idmEndpoints.token }}
     connectorserver.url={{ .Values.idmEndpoints.wss }}
   DS_CA: |-
