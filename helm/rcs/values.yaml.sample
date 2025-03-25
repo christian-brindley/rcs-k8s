@@ -21,8 +21,8 @@ tolerations: []
 affinity: {}
 
 idmEndpoints:
-  wss: "wss://openam-brindley.forgeblocks.com/openicf"
-  token: "https://openam-brindley.forgeblocks.com/am/oauth2/realms/root/realms/alpha/access_token"
+  wss: "wss://openam-demo.forgeblocks.com/openicf"
+  token: "https://openam-demo.forgeblocks.com/am/oauth2/realms/root/realms/alpha/access_token"
 egressTargetRanges: ["34.8.247.114/32"]
 logLevels:
   root: "DEBUG"
