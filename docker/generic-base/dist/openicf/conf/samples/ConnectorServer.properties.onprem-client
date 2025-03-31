@@ -1,0 +1,50 @@
+# Copyright 2025 Ping Identity Corporation. All Rights Reserved
+#
+# Use of this code requires a commercial software license with Ping Identity Corporation.
+# or with one of its affiliates. All use shall be exclusively subject
+# to such license between the licensee and Ping Identity Corporation.
+
+##
+## The URL(s) the connector server should connect to (e.g. IDM)
+##
+#connectorserver.url=ws://localhost:8080/openicf
+## TLS/wss
+#connectorserver.url=wss://localhost:8443/openicf
+
+##
+## The unique connector server name
+##
+## The name given here must match a configuration on the IDM side, for the
+## connection to be made.
+##
+#connectorserver.connectorServerName=myConnectorServer
+
+##
+## The principal to authenticate for Basic auth (see below for OAuth2 authentication)
+##
+#connectorserver.principal=anonymous
+
+##
+## The password to authenticate for Basic auth (see below for OAuth2 authentication)
+##
+#connectorserver.password=changeit
+
+######### Http Proxy configuration
+##
+## The proxy server host
+##
+#connectorserver.proxyHost=
+##
+## The proxy server port
+##
+#connectorserver.proxyPort=
+##
+## The proxy server principal
+##
+#connectorserver.proxyPrincipal=
+##
+## The proxy server password
+##
+#connectorserver.proxyPassword=
+##
+######### End of proxy configuration

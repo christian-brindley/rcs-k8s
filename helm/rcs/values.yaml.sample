@@ -23,7 +23,7 @@ affinity: {}
 idmEndpoints:
   wss: "wss://openam-demo.forgeblocks.com/openicf"
   token: "https://openam-demo.forgeblocks.com/am/oauth2/realms/root/realms/alpha/access_token"
-egressTargetRanges: ["34.8.247.114/32"]
+tenantIp: "34.8.247.100"
 logLevels:
   root: "DEBUG"
   classes:
