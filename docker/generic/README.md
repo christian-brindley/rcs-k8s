@@ -2,9 +2,21 @@
 
 ## Preparation
 
-Unzip the RCS product download into the `dist` directory. There should now be a `dist/openicf` subdirectory.
+Unzip the RCS product download into the `dist` directory.
+
+```
+cd docker/generic/dist
+unzip ~/Downloads/openicf-zip-1.5.20.28.zip
+```
+
+There should now be a `dist/openicf` subdirectory.
 
 Copy the required connectors from the `dist/openicf/connectors` directory to the `overlay/connectors` directory.
+
+```
+cd ../overlay/connectors
+cp ../../dist/openicf/connectors/ldap-connector-1.5.20.28.jar .
+```
 
 ## Build image
 
