@@ -8,6 +8,6 @@ THE CODE HEREUNDER IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND. SUCH CO
 
 This repository includes sample deployment artifacts for the Ping Identity Remote Connector Service (RCS). Assets include
 
-- A [sample Docker build based on the sample RCS](docker/rcs-base/) provided by Ping Identity
-- A [sample Docker build based on a generic OS image with JVM](docker/generic-base) (Ping Java image used for illustration)
+- A [sample Docker build based on the sample RCS image](docker/ping/) provided by Ping Identity
+- A [sample Docker build based on a generic linux image](docker/generic) (alpine linux used for illustration)
 - A [sample helm chart](helm) and associated templates for deploying the image in a kubernetes environment
