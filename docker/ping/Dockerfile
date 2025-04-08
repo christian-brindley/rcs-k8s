@@ -1,6 +1,8 @@
 # 1. Accept build arguments in the FROM instruction.
 # @example
+
 ARG RCS_VERSION=1.5.20.28
+
 FROM gcr.io/forgerock-io/rcs:$RCS_VERSION
  
 # Merge your custom files with the RCS installation.

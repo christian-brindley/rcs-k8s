@@ -2,7 +2,7 @@
 
 ## Preparation
 
-Unzip the RCS product download into the `dist` directory.
+Unzip the RCS product download into the `dist` directory - e.g.
 
 ```
 cd docker/generic/dist
